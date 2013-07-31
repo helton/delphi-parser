@@ -4,7 +4,7 @@
 
 from delphi_lexer import DelphiLexer
 
-statement = """
+source_code = """
 unit Functions.Classes.SSIOUtils;
 
 interface
@@ -221,13 +221,13 @@ meu teste
 end.
 """
 
-line_format = "| %20s | %30s | %6s | %6s |"
-separator = '=' * 66
+line_format = "| %20s | %100s | %6s | %6s |"
+separator = '=' * 145
 
-print('statement =', statement)
+print('source_code =', source_code)
 print(separator)
 print(line_format % ('TYPE', 'VALUE', 'LINE', 'COLUMN'))
 print(separator)
-for token in DelphiLexer(statement).get_token():
+for token in DelphiLexer(source_code).get_token():
     print(line_format % token)
 print(separator)

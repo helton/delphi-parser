@@ -1,3 +1,4 @@
+# Extract from https://github.com/Turbo87/DGrok/blob/master/Grammar.yaml
 # First column: .=unfinished, !=finished and working
 AddOp:
   Doc: |
